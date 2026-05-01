@@ -104,8 +104,8 @@ if check_password():
             else:
                 with st.spinner("Saving your information securely..."):
                     try:
-                        # Read existing data
-                        df = conn.read()
+                        # Read existing data (ttl=0 ensures we get fresh data and don't overwrite others)
+                        df = conn.read(ttl=0)
                         
                         # Handle Empty DataFrames if sheet is newly created
                         if df.empty or len(df.columns) == 0:
