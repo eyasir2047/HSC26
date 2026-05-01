@@ -54,7 +54,7 @@ st.markdown("""
 def check_password():
     """Returns `True` if the user had the correct password."""
     def password_entered():
-        if st.session_state["password"] == "57":
+        if st.session_state["password"] == "sirius57":
             st.session_state["password_correct"] = True
             # We keep the password state so we don't accidentally log out,
             # but usually you'd securely hash or token manage this.
